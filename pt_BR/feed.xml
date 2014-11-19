@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
     <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>ChileBit.NET</title>
-        <description>El primer exchange de Bitcoins de Chile.</description>
+        <title></title>
+        <description></description>
         <link>https://chilebit.net/exchange/pt_BR/</link>
         <atom:link href="https://chilebit.net/exchange/pt_BR/feed.xml" rel="self" type="application/rss+xml" />
 
