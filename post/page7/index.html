@@ -41,8 +41,8 @@
     <link href="https://chilebit.net/exchange/assets/themes/default/css/Dialog.css" rel="stylesheet">
     <link href="https://chilebit.net/exchange/assets/themes/default/css/fuelux.css" rel="stylesheet">
     <link href="https://chilebit.net/exchange/assets/themes/default/css/default.uni-form.css" rel="stylesheet">
-    <link href="https://chilebit.net/exchange/assets/themes/default/css/style.css?v=ea2e239" rel="stylesheet">
-    <script data-cfasync="false" src="https://chilebit.net/exchange/assets/js/bitex_app_blink_trade.compiled.es.default.js?v=ea2e239" type="text/javascript"></script>
+    <link href="https://chilebit.net/exchange/assets/themes/default/css/style.css?v=aa24cea" rel="stylesheet">
+    <script data-cfasync="false" src="https://chilebit.net/exchange/assets/js/bitex_app_blink_trade.compiled.es.default.js?v=aa24cea" type="text/javascript"></script>
     
   </head>
   <body class=" ws-not-connected bitex-not-logged active-view-start ">
@@ -857,6 +857,14 @@ También podrá revisar su historial de depósitos y retiros median</p>
         </div>
       </div>
 
+      <div id="algotrading" class="bitex-view">
+        <div class="section-title">
+          <h3 class="bitex-view-title">Algorithm Trading</h3>
+        </div>
+        <div class="bitex-view-content"></div>
+      </div>
+
+
       <div id="offerbook" class="bitex-view">
         <div class="section-title">
           <h3 class="bitex-view-title">Libro de órdenes</h3>
@@ -956,6 +964,9 @@ También podrá revisar su historial de depósitos y retiros median</p>
         </div>
       </div>
 
+
+
+
       <div id="settings" class="bitex-view">
         <div class="section-title">
           <h3 class="bitex-view-title">Configuraciones</h3>
@@ -1015,6 +1026,7 @@ También podrá revisar su historial de depósitos y retiros median</p>
                                                 bitex-view-deposit_requests
                                                 bitex-view-ledger
                                                 bitex-view-settings
+                                                bitex-view-algotrading
                                                 bitex-view-my_broker
                                                 bitex-view-verification">
       <h3><span class="bitex-model bitex-view-title" data-model-key="DisplayName"></span>
@@ -1053,6 +1065,10 @@ También podrá revisar su historial de depósitos y retiros median</p>
               <i data-switch-view="offerbook" class="icon-book"></i> Libro de órdenes</a>
           </li>
 
+          <li style="">
+            <a href="" data-switch-view="algotrading">
+              <i data-switch-view="algotrading" class="icon-cog"></i> Algo Trading</a>
+          </li>
 
           <li style="">
             <a href="" data-switch-view="ledger">
@@ -1124,7 +1140,7 @@ También podrá revisar su historial de depósitos y retiros median</p>
           
           <a href="" data-switch-view="admin">admin</a> |
           Latency: <span class="bitex-model" data-model-key="latency">0</span> ms |
-          Version: ea2e239 |
+          Version: aa24cea |
           
           <a href="http://blinktrade.com/" target="_blank">© 2014 BlinkTrade Inc</a>
           | <a href="https://github.com/blinktrade/" target="_blank">Proudly 100% open source <span class="bitex-model" data-model-key="JSVersion"></span></a>
@@ -1138,7 +1154,7 @@ También podrá revisar su historial de depósitos y retiros median</p>
     <script data-cfasync="false" type="text/javascript">
       var _app;  // global application object
       (function(){
-        var broker_id = 5;
+        var broker_id = 9;
         var country_code = "CL";
         var blinktrade_api = "api.testnet.blinktrade.com";
 
