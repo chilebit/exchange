@@ -38,15 +38,15 @@
   <script type="text/javascript" src="//apis.google.com/js/plusone.js"></script>
 
   
-  <link href="https://chilebit.net/zn_CN/assets/themes/default/css/style-new.css?v=e0dee87" rel="stylesheet">
+  <link href="https://chilebit.net/zn_CN/assets/themes/default/css/style-new.css?v=7f543f6" rel="stylesheet">
   <link href="https://chilebit.net/zn_CN/assets/css/flag-icon.css" rel="stylesheet">
 
   
-    <link href="https://chilebit.net/zn_CN/assets/themes/coinage/sass/main.chilebit.css?v=e0dee87" rel="stylesheet">
+    <link href="https://chilebit.net/zn_CN/assets/themes/coinage/sass/main.chilebit.css?v=7f543f6" rel="stylesheet">
   
 
   <link rel="stylesheet" href="https://chilebit.net/zn_CN/assets/themes/coinage/css/font-awesome.min.css">
-  <script data-cfasync="false" src="https://chilebit.net/zn_CN/assets/js/bitex_app_blink_trade.compiled.zn_CN.coinage.js?v=e0dee87" type="text/javascript"></script>
+  <script data-cfasync="false" src="https://chilebit.net/zn_CN/assets/js/bitex_app_blink_trade.compiled.zn_CN.coinage.js?v=7f543f6" type="text/javascript"></script>
   <script src="https://chilebit.net/zn_CN/assets/themes/coinage/javascript/jquery-1.12.0.min.js"></script>
   <script src="https://chilebit.net/zn_CN/assets/themes/coinage/javascript/bootstrap.min.js"></script>
   <script src="https://chilebit.net/zn_CN/assets/js/externs/qrcode.min.js"></script>
@@ -61,7 +61,7 @@
         <!-- .container-fluid -->
         <div class="container">
             <!-- .head-ticker -->
-            <ul class="head-ticker">
+            <ul class="head-ticker bitex-model" data-model-key="IsProTrader" style="display: none" data-model-action="show_element">
                 <li>
                     <span class="head-ticker__title">
                         <i class="glyphicon glyphicon-triangle-right"></i> 上次交易&nbsp;
@@ -115,12 +115,20 @@
 
             <ul class="head-top-nav navbar-right pull-right">
               <!-- .head-market -->
+              <li>
+                
+                  <a href="https://chilebit.trakdesk.com" target="_blank" rel="noopener noreferrer" class="head-top-button">
+                    <i class="glyphicon glyphicon-question-sign"></i>
+                    常见问题
+                  </a>
+                
+              </li>
               <li class="bitex-display-if-logged">
                 <a data-switch-view="trading" href="#" class="head-top-button">
                   <i class="glyphicon glyphicon-random"></i> 交易
                 </a>
               </li>
-              <li>
+              <li class="bitex-model" style="display: none" data-model-key="IsProTrader" data-model-action="show_element">
                 <a data-switch-view="market" href="#" class="head-top-button">
                     <i class="glyphicon glyphicon-stats"></i> 市场
                 </a>
@@ -253,6 +261,55 @@
                 </li>
               </ul>
             </li>
+
+            <!-- .head-language -->
+            <li class="dropdown bitex-model" data-model-key="IsProTrader" data-model-action="hide_element" style="display: none; padding:0; margin-top: -4px;">
+              <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" style="padding:13.5px">
+                  <span class="flag-icon flag-icon-zn_CN"></span> <b class="caret"></b></a>
+              </a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="drop1" style="min-width:60px;max-width:61px">
+              
+                
+                  
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="https://chilebit.net/">
+                      <span class="flag-icon flag-icon-es"></span></a></li>
+                  
+                
+              
+                
+                  
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="https://chilebit.net/pt_BR">
+                      <span class="flag-icon flag-icon-pt_BR"></span></a></li>
+                  
+                
+              
+                
+                  
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="https://chilebit.net/en_US">
+                      <span class="flag-icon flag-icon-en_US"></span></a></li>
+                  
+                
+              
+                
+                  
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="https://chilebit.net/ro">
+                      <span class="flag-icon flag-icon-ro"></span></a></li>
+                  
+                
+              
+                
+              
+                
+                  
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="https://chilebit.net/vi">
+                      <span class="flag-icon flag-icon-vi"></span></a></li>
+                  
+                
+              
+              </ul>
+            </li>
+            <!-- /.head-language -->
+
             <li class="bitex-hide-if-logged">
               <button class="btn btn-outline btn-signup col-xs-12" style="float:none" href="#" data-switch-view="signup">
                   注册
@@ -547,6 +604,11 @@
                     <div class="form-group">
                       <label for="id_password">密码:</label>
                       <input class="form-control" id="id_password"  placeholder="" name="password" type="password">
+                      <p class="bitex-model" style="display: none" data-model-key="HasToken" data-model-action="show_element">
+                        <br />
+                        <input type="checkbox" id="id_trusted_device" />
+                        <label for="id_trusted_device">Trust this device for 30 days</label>
+                      </p>
                       <p class="help-block">
                         <a class="login__remember" href="forgot_password" data-switch-view="forgot_password">忘记了密码？</a>
                       </p>
@@ -739,7 +801,7 @@
             <div class="container">
                 <button type="button" class="close pull-right" data-dismiss="alert">&times;</button>
                 
-                  <a href="" class="alert-link" data-switch-view="faq"> 你的账户已经被管理员冻结，请联系管理员。 </a>
+                  <a href="https://chilebit.trakdesk.com" class="alert-link" target="_blank" rel="noopener noreferrer"> 你的账户已经被管理员冻结，请联系管理员。 </a>
                 
             </div>
         </div>
@@ -1367,8 +1429,8 @@
                   <div class="sidebar-box__body">
                       <div id="id_remittance_box"></div>
                       
-                      <a class="twitter-timeline" href="https://twitter.com/chilebitnet" data-theme="light" data-link-color="#538FE7" data-widget-id="717632421223657472">Tweets by @chilebitnet</a>
-                      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                        <a class="twitter-timeline" href="https://twitter.com/chilebitstatus" data-theme="light" data-link-color="#538FE7" data-widget-id="717632421223657472">Tweets by @chilebitstatus</a>
+                        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
                       
                   </div>
               </div>
@@ -1402,28 +1464,6 @@
   <!-- /#market -->
   <!-- #faq -->
   <div id="faq" class="container bitex-view" style="padding-bottom:42px;display:none">
-      
-        <!-- .page__head -->
-        <header class="page__head">
-            <h1 class="page__title h2 bitex-view-title">
-                <i class="glyphicon glyphicon-question-sign"></i> FAQ - 常见问题
-            </h1>
-        </header>
-        <!-- /.page__head -->
-
-        <!-- .page__body -->
-        <div class="page__body bitex-view-content">
-            <!-- .panel-group -->
-            <div class="panel-group accordion" id="accordion">
-                
-            </div>
-            <!-- /.panel-group -->
-
-            <a href="" class="bitex-support-link" target="_blank">
-                <i class="glyphicon glyphicon-envelope"></i> 如果您还有其他疑惑，请联系我们.
-            </a>
-        </div>
-        <!-- /.page__body -->
       
   </div>
   <!-- /#faq -->
@@ -1498,7 +1538,7 @@
                     </li>
                     
                     <li>
-                        Version: e0dee87
+                        Version: 7f543f6
                     </li>
                     <li>
                         <a href="https://github.com/blinktrade/" target="_blank">Proudly 100% open source <span class="bitex-model" data-model-key="JSVersion"></span></a>
@@ -1511,12 +1551,12 @@
             <div class="col-sm-4">
                 <h5></h5>
                 <ul>
-                    <li>
+                    <li class="bitex-model" style="display: none" data-model-key="IsProTrader" data-model-action="show_element">
                         <a href="#" data-switch-view="api">API </a>
                     </li>
                     <li>
                       
-                        <a href="" data-switch-view="faq">建议和问题</a>
+                        <a href="https://chilebit.trakdesk.com" target="_blank" rel="noopener noreferrer">建议和问题</a>
                       
                     </li>
                 </ul>
@@ -1612,23 +1652,27 @@
       m.parentNode.insertBefore(a, m)
     })(window, document, 'script', '//www.google-analytics.com/analytics.js', '_gat');
 
-    _gat('create', 'UA-56565606-1', 'auto');
+    _gat('create', 'UA-110980796-1', 'auto');
     _gat('send', 'pageview');
   </script>
   
 
   
-  <!--Start of Zopim Live Chat Script-->
-  <script data-cfasync="false" type="text/javascript">
-    window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
-        d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
-        _.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute('charset','utf-8');
-      $.src='https://v2.zopim.com/?2aIJdGCoaI6qy2YO4oK2zPAM8h1NoILb';z.t=+new Date;$.
-          type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
-  </script>
-  <!--End of Zopim Live Chat Script-->
+
   
 
+  
+  <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+      var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+      s1.async=true;
+      s1.src='https://embed.tawk.to/5a2fce3a5d3202175d9b7c40/default';
+      s1.charset='UTF-8';
+      s1.setAttribute('crossorigin','*');
+      s0.parentNode.insertBefore(s1,s0);
+    })();
+  </script>
   
 
   </body>
